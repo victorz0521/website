@@ -11,10 +11,17 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+            ), url('columbia-university.jpg'), url('nyu.jpg');
+            background-size: cover, cover;
+            background-position: center, center;
+            background-repeat: no-repeat, no-repeat;
+            background-blend-mode: overlay;
         }
         header {
-            background: #35424a;
+            background: rgba(53, 66, 74, 0.9);
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
@@ -26,6 +33,8 @@
             width: 80%;
             margin: auto;
             overflow: hidden;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
         }
         section {
             padding: 20px 0;
@@ -34,15 +43,19 @@
         h2 {
             color: #35424a;
         }
-        .contact-info, .skills {
+        ul {
             list-style: none;
             padding: 0;
         }
-        .contact-info li, .skills li {
+        .contact-info, .skills, .experience, .projects {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info li, .skills li, .experience li, .projects li {
             padding: 5px 0;
         }
         footer {
-            background: #35424a;
+            background: rgba(53, 66, 74, 0.9);
             color: #ffffff;
             text-align: center;
             padding: 10px 0;
@@ -67,46 +80,77 @@
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>Master of Finance</strong>, XYZ University, 2018</li>
-                <li><strong>Bachelor of Economics</strong>, ABC University, 2016</li>
+                <li><strong>Master of Applied Analytics</strong>, Columbia University, New York, NY, 2021–2022</li>
+                <li><strong>Bachelor of Mathematics and Economics</strong>, New York University, New York, NY, 2019–2021</li>
             </ul>
         </section>
 
         <section id="experience">
             <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Credit Analyst</strong>, ICBC USA, 2019 - Present</li>
-                <p>Responsible for analyzing credit data and financial statements to determine the risk involved in lending money to clients. Prepare reports with credit information for use in decision-making.</p>
-                <li><strong>Financial Analyst Intern</strong>, DEF Corp, 2018 - 2019</li>
-                <p>Assisted in financial modeling and forecasting to support the finance department's strategic planning and budgeting processes.</p>
+            <ul class="experience">
+                <li>
+                    <strong>Credit Analyst</strong>, Industrial and Commercial Bank of China (USA) NA, New York, NY, May 2023-Present
+                    <ul>
+                        <li>Enforce banking customer due diligence through updated KYC documentation and identity verification.</li>
+                        <li>Analyze loan eligibilities through individual compliance checklist, quarterly (10Q), annual financials (10K) and current report (8K).</li>
+                        <li>Establish and grant credit lines to Financial Institution customers.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Financial Analysis Assistant</strong>, Shanghai Yuanbai Investment Co.,Ltd., Shanghai, CHN, Jul 2019 - Aug 2019
+                    <ul>
+                        <li>Participated in the program of exploring and analyzing the business model of long rental apartments including conducting a survey on long rental apartments, analyzing its financial statements, verifying its profitability and financial risk, collecting information on its latest development, and drafting stock investment advisory weekly reports of over 5 pages, and presented the findings to client stakeholders.</li>
+                        <li>Prepared weekly finance trends analysis reports to help customers better understand industry trends.</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Credit Risk Assessment Model</strong> - Developed a comprehensive model to evaluate the creditworthiness of potential clients, resulting in a 15% reduction in default rates.</li>
-                <li><strong>Financial Performance Dashboard</strong> - Created an interactive dashboard to monitor key financial metrics, enhancing the visibility of the company's financial health.</li>
+            <h2>Project Experience</h2>
+            <ul class="projects">
+                <li>
+                    <strong>Prediction of Readmission Rate for Nascentia Health</strong>, New York, NY, 2021–2022
+                    <ul>
+                        <li>Conducted visual analysis on petitions’ data (600K+ rows) using Python and Tableau.</li>
+                        <li>Built models to predict readmission rates of patients based on data, achieving 90% accuracy.</li>
+                        <li>Provided a dashboard for clients to predict readmission rates of different patients in the future.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Lululemon’s Promotion Method Research</strong>, New York, NY, 2021–2022
+                    <ul>
+                        <li>Designed an experimental study of Lululemon’s promotion method by comparing the impact of different discount methods using statistical analysis such as confidence intervals, hypothesis tests, and dummy variables, implemented in R.</li>
+                        <li>Proved that price discounts can generate 10% more sales than full reduction.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Analysis of Citibike Data</strong>, New York, NY, 2021–2022
+                    <ul>
+                        <li>Constructed analysis on data (230K+ rows) through summary statistics, correlation matrix, and clustering using R.</li>
+                        <li>Identified and visualized data by age, gender, and location using Tableau.</li>
+                        <li>Concluded that most non-subscribers are concentrated in the age groups under 30 and around 50 with preferred bike stations. Delivering targeted ads with coupons based on the analysis results can effectively increase customer subscriptions by 10%.</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
             <ul class="skills">
-                <li>Credit Analysis</li>
-                <li>Financial Modeling</li>
-                <li>Risk Management</li>
-                <li>Data Analysis</li>
-                <li>Microsoft Excel</li>
-                <li>SQL</li>
+                <li>Programming Languages: Python, R, SQL</li>
+                <li>Data Visualization: Tableau, Excel</li>
+                <li>Statistical & ML Techniques: Decision Tree, Logistic Regression, Time Series, Random Forest</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <ul class="contact-info">
-                <li>Email: xinlei.zhang@example.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/xinleizhang" target="_blank">linkedin.com/in/xinleizhang</a></li>
+                <li>Email: <a href="mailto:xinleizhangwang@gmail.com">xinleizhangwang@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/xinlei-zhang-zxl0521" target="_blank">linkedin.com/in/xinlei-zhang-zxl0521</a></li>
+                <li>Location: Syosset, NY</li>
+                <li>Phone: (347)-822-6098</li>
             </ul>
         </section>
     </div>
@@ -116,3 +160,4 @@
     </footer>
 </body>
 </html>
+
